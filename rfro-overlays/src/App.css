@@ -1,0 +1,55 @@
+/* src/App.css */
+body {
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+  color: white;
+  font-family: 'Arial', sans-serif; /* Use a clean font */
+  margin: 0;
+  padding: 20px;
+}
+
+.weather-overlay {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(50, 50, 50, 0.8); /* Darker transparent background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.weather-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.weather-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.weather-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.weather-item p {
+  margin-left: 10px;
+  font-size: 16px;
+}
