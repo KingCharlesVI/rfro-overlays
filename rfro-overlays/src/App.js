@@ -1,23 +1,18 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Weather from './components/Weather';
-import './App.css'; // Ensure this is imported
+import PitWindow from './components/PitWindow';  // Import the new component
+import './App.css';
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/weather" element={<div className="weather-container"><Weather /></div>} />
-        <Route path="/" element={
-          <div>
-            <h1>RFRO Overlays</h1>
-            <p>Visit the /weather route for the weather widget.</p>
-          </div>
-        } />
+        <Route path="/weather" element={<Weather />} />
+        <Route path="/pit" element={<PitWindow />} />  {/* Add the new route */}
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;

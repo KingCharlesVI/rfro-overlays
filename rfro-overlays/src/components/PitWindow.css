@@ -1,0 +1,11 @@
+.pit-window-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 3rem;
+    font-weight: bold;
+    color: greenyellow; /* Yellow color */
+    background-color: transparent; /* Transparent background */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add some shadow to make text stand out */
+}
