@@ -1,0 +1,48 @@
+.overlay-container {
+    position: absolute;
+    top: 20px; /* Position it at the top center */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top of everything */
+}
+
+.incident-box {
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent black background */
+    color: white;
+    border-left: 5px solid #fc0; /* F1 style yellow border */
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 18px;
+    width: fit-content;
+    opacity: 0;
+    animation: slide-in 0.5s forwards, slide-out 0.5s 4.5s forwards; /* Slide in/out animation */
+}
+
+/* Animation for sliding in and out */
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
